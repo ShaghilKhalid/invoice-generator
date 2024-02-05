@@ -31,9 +31,6 @@ const ViewInvoice = () => {
             }
         }).catch(err => console.log(err, 'error'))
     }, [])
-    const downloadInvoice = () => {
-
-    }
     // @ts-ignore
     const data = Data.filter(e => e._id === id)[0]
     return (
