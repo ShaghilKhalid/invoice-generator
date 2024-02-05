@@ -22,6 +22,7 @@ const ViewInvoice = () => {
             if (res.response.status === 200) {
                 let temp: any = []
                 temp = res.response.data;
+                {/* @ts-ignore */ }
                 setData([...temp])
                 console.log(temp, 'dataaa')
             }
@@ -33,6 +34,7 @@ const ViewInvoice = () => {
     const downloadInvoice = () => {
 
     }
+    // @ts-ignore
     const data = Data.filter(e => e._id === id)[0]
     return (
         <>
@@ -64,6 +66,7 @@ const ViewInvoice = () => {
                             <div className="invoice-top-texts">
                                 <div className="">
                                     <h1 className='text-gray-500 text-lg font-normal'>Billed To</h1>
+                                    {/* @ts-ignore */}
                                     <span className='font-bold'>{data?.billed_to}</span>
                                 </div>
                             </div>
@@ -80,6 +83,7 @@ const ViewInvoice = () => {
                             <div className="invoice-top-texts">
                                 <div className="">
                                     <h1 className='text-gray-500 text-lg font-normal'>Invoice Of (PKR)</h1>
+                                    {/* @ts-ignore */}
                                     <span className='font-bold'>{data?.amount}</span>
                                 </div>
                             </div>
@@ -90,6 +94,7 @@ const ViewInvoice = () => {
                             <div className="invoice-top-texts">
                                 <div className="">
                                     <h1 className='text-gray-500 text-lg font-normal'>Subject</h1>
+                                    {/* @ts-ignore */}
                                     <span className='font-bold'>{data?.subject}</span>
                                 </div>
                             </div>
@@ -98,6 +103,7 @@ const ViewInvoice = () => {
                             <div className="invoice-top-texts">
                                 <div className="">
                                     <h1 className='text-gray-500 text-lg font-normal'>Invoice date</h1>
+                                    {/* @ts-ignore */}
                                     <span className='font-bold'>{new Date(data?.invoice_date).toLocaleDateString()}</span>
                                 </div>
                             </div>
@@ -106,6 +112,7 @@ const ViewInvoice = () => {
                             <div className="invoice-top-texts">
                                 <div className="">
                                     <h1 className='text-gray-500 text-lg font-normal'>Due date</h1>
+                                    {/* @ts-ignore */}
                                     <span className='font-bold'>{new Date(data?.due_date).toLocaleDateString()}</span>
                                 </div>
                             </div>
@@ -118,10 +125,13 @@ const ViewInvoice = () => {
                     </div>
                     <div className="invoice-bottom-2 flex items-center justify-between border-b mt-5 p-2">
                         <div className="font-bold">
+                            {/* @ts-ignore */}
                             {data?.item}
                         </div>
+                        {/* @ts-ignore */}
                         <div className="font-bold">{data?.quantity}</div>
                         <div className="font-bold">
+                            {/* @ts-ignore */}
                             {data?.amount.toLocaleString()}
                         </div>
                     </div>
@@ -133,10 +143,12 @@ const ViewInvoice = () => {
                         <div className="">
                             <div className="subtotal flex justify-between items-center px-2 border-b borde-2 pb-3">
                                 <div className="text-gray-500 text-lg font-normal">Subtotal</div>
+                                {/* @ts-ignore */}
                                 <div className="font-bold">{data?.amount.toLocaleString()}</div>
                             </div>
                             <div className="total flex justify-between items-center px-2 mt-2">
                                 <div className="text-gray-500 text-lg font-normal">Total</div>
+                                {/* @ts-ignore */}
                                 <div className="font-bold">{data?.amount.toLocaleString()}</div>
                             </div>
                         </div>

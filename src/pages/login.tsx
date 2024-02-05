@@ -59,6 +59,7 @@ const Login = () => {
     const login = () => {
         if (form.email === "admin@gmail.com" && form.password === "Ok@123456") {
             localStorage.setItem("token", form.email)
+            // @ts-ignore
             window.location = '/'
         }
         else if (form.email === "" && form.password === "") {
