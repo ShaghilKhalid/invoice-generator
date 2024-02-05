@@ -1,0 +1,35 @@
+// Custom
+.custom-drop-shadow {
+  box-shadow: 0 18px 30px 0 #4461f2;
+}
+.img-fluid {
+  height: 100px;
+  object-fit: cover;
+  width: 100px;
+}
+.bg-primary-gray {
+  background: #ddd;
+}
+// Custom End
+// Login
+.icon {
+  position: absolute;
+  bottom: 75px;
+  right: 10px;
+}
+// Login End
+// view Invoice
+.invoice-body {
+  max-width: 850px;
+  margin: auto;
+}
+.view-invoice-container {
+  max-width: 950px;
+  margin: auto;
+  padding: 10px 20px;
+}
+.invoice-body {
+  height: 100vh;
+  border: 1px solid #d7dae0;
+}
+// view Invoice End
